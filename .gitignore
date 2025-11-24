@@ -1,0 +1,5 @@
+node_modules
+.next
+__pycache__
+*.h5
+tfjs_target_dir

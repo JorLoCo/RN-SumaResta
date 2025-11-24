@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react';
 import * as tf from '@tensorflow/tfjs';
 
 export default function Calculadora() {
-  const [modeloActual, setModeloActual] = useState(null);
+  // CORRECCIÓN: Agregamos <any> para evitar el error de TypeScript "Argument of type LayersModel..."
+  const [modeloActual, setModeloActual] = useState<any>(null);
   const [operacion, setOperacion] = useState('suma'); // 'suma' o 'resta'
   const [valA, setValA] = useState('');
   const [valB, setValB] = useState('');
